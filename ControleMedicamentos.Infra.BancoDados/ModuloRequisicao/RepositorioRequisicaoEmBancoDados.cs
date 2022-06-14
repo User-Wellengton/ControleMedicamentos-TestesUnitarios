@@ -8,5 +8,19 @@ namespace ControleMedicamentos.Infra.BancoDados.ModuloRequisicao
 {
     public class RepositorioRequisicaoEmBancoDados
     {
+        private const string enderecoBanco =
+       "Data Source=(localdb)\\MSSQLLocalDB;" +
+       "Initial Catalog=ControleMedicamentos;" +
+       "Integrated Security=True;" +
+       "Pooling=False";
+
+
+
+
+
+
+
+
+
     }
 }

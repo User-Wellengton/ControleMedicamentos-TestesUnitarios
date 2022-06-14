@@ -28,5 +28,25 @@ namespace ControleMedicamentos.Dominio.ModuloMedicamento
             Requisicoes = new List<Requisicao>();
         }
 
+        public override bool Equals(object obj)
+        {
+            Medicamento medicamento = obj as Medicamento;
+
+            if (medicamento == null)
+                return false;
+
+            return
+                medicamento.Id.Equals(Id) &&
+                medicamento.Nome.Equals(Nome) &&
+                medicamento.Descricao.Equals(Descricao) &&
+                medicamento.Lote.Equals(Lote) &&
+                medicamento.Validade.Equals(Validade) &&
+                medicamento.QuantidadeDisponivel.Equals(QuantidadeDisponivel) &&
+                medicamento.Requisicoes.Equals(Requisicoes) &&
+                medicamento.Fornecedor.Equals(Fornecedor) &&
+                medicamento.QuantidadeRequisicoes.Equals(QuantidadeRequisicoes);
+        }
+
+
     }
 }
