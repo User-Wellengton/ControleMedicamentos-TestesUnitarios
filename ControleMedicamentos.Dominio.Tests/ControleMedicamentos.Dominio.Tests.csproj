@@ -18,9 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ModuloFornecedor\" />
     <Folder Include="ModuloFuncionario\" />
-    <Folder Include="ModuloPaciente\" />
     <Folder Include="ModuloRequisicao\" />
   </ItemGroup>
 
