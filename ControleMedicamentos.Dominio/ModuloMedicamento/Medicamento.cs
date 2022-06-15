@@ -42,19 +42,15 @@ namespace ControleMedicamentos.Dominio.ModuloMedicamento
                 medicamento.Lote.Equals(Lote) &&
                 medicamento.Validade.Equals(Validade) &&
                 medicamento.QuantidadeDisponivel.Equals(QuantidadeDisponivel) &&
-                medicamento.Requisicoes.Equals(Requisicoes) &&
-                medicamento.Fornecedor.Equals(Fornecedor) &&
-                medicamento.QuantidadeRequisicoes.Equals(QuantidadeRequisicoes);
+                medicamento.Fornecedor.Equals(Fornecedor);
+                
         }
 
 
         public override string ToString()
-        {
-            string requisicaoToString = "";
-            Requisicoes.ForEach(x => requisicaoToString += x.ToString());
-
-            return $"NOME: {Nome} DESCRICAO: {Descricao} LOTE: {Lote} VALIDADE: {Validade} QUANTIDADE DISPONIVEL: {QuantidadeDisponivel}" +
-                $" REQUISICOES: {requisicaoToString} FORNECEDOR: {Fornecedor} QUANTIDADE REQUISICOES: {QuantidadeRequisicoes}";
+        {           
+            return $"NOME: {Nome} DESCRICAO: {Descricao} LOTE: {Lote} VALIDADE: {Validade}" +
+                $" QUANTIDADE DISPONIVEL: {QuantidadeDisponivel} FORNECEDOR: {Fornecedor} ";
         }
 
     }
