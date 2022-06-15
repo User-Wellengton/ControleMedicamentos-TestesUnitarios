@@ -32,5 +32,12 @@ namespace ControleMedicamentos.Dominio.ModuloRequisicao
                 requisicao.Funcionario.Equals(Funcionario);
         }
 
+        public override string ToString()
+        {
+           
+
+            return $"MEDICAMENTO: {Medicamento} PACIENTE: {Paciente} QTDMEDICAMENTO: {QtdMedicamento} DATA: {Data} FUNCIONARIO: {Funcionario}";
+        }
+
     }
 }

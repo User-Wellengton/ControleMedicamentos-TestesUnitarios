@@ -24,5 +24,11 @@
                 paciente.Nome.Equals(Nome) &&
                 paciente.CartaoSUS.Equals(CartaoSUS);
         }
+
+        public override string ToString()
+        {
+            return $"NOME: {Nome} CARTAOSUS: {CartaoSUS}";
+        }
+
     }
 }

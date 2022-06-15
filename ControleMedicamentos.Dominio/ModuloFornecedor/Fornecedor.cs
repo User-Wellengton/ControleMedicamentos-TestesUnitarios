@@ -34,7 +34,10 @@
                 fornecedor.Estado.Equals(Estado);
         }
 
-
+        public override string ToString()
+        {
+            return $"NOME: {Nome} TELEFONE: {Telefone} EMAIL: {Email} CIDADE: {Cidade} ESTADO: {Estado}";
+        }
 
 
     }

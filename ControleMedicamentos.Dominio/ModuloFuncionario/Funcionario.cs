@@ -29,7 +29,10 @@
                 funcionario.Senha.Equals(Senha);
         }
 
-
+        public override string ToString()
+        {
+            return $"NOME: {Nome} LOGIN: {Login} SENHA: {Senha}";
+        }
 
     }
 }

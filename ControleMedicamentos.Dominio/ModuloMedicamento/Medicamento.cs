@@ -48,5 +48,14 @@ namespace ControleMedicamentos.Dominio.ModuloMedicamento
         }
 
 
+        public override string ToString()
+        {
+            string requisicaoToString = "";
+            Requisicoes.ForEach(x => requisicaoToString += x.ToString());
+
+            return $"NOME: {Nome} DESCRICAO: {Descricao} LOTE: {Lote} VALIDADE: {Validade} QUANTIDADE DISPONIVEL: {QuantidadeDisponivel}" +
+                $" REQUISICOES: {requisicaoToString} FORNECEDOR: {Fornecedor} QUANTIDADE REQUISICOES: {QuantidadeRequisicoes}";
+        }
+
     }
 }

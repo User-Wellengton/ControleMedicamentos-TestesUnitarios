@@ -121,7 +121,7 @@ namespace ControleMedicamento.Infra.BancoDados.ModuloMedicamento
                 INNER JOIN TBFUNCIONARIO ON
                 REQUISICAO.[FUNCIONARIO_ID] = FUNCIONARIO.[ID]";
 
-        private const string sqlSelecionarRequisicaoPorNumero =
+        private const string sqlSelecionarRequisicaoPorId =
         @"SELECT                
                 REQUISICAO.[ID],
                 REQUISICAO.[FUNCIONARIO_ID],
@@ -258,7 +258,7 @@ namespace ControleMedicamento.Infra.BancoDados.ModuloMedicamento
             {
                 medicamento = ConverterMedicamento(sqlDataReader);
                 SqlCommand sqlCommandRequisicao = new SqlCommand
-                    (sqlSelecionarRequisicaoPorNumero, sqlConnection);
+                    (sqlSelecionarRequisicaoPorId, sqlConnection);
                 sqlCommandRequisicao.Parameters.AddWithValue("MED_ID", medicamento.Id);
                 SqlDataReader sqlDataReaderRequisicao = sqlCommandRequisicao.ExecuteReader();
                 List<Requisicao> requisicoes = new List<Requisicao>();
