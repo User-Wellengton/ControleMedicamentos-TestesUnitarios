@@ -25,11 +25,12 @@ namespace ControleMedicamentos.Dominio.ModuloMedicamento
                 .NotEmpty().WithMessage("Campo 'Lote' não pode ser vazio");
 
             RuleFor(x => x.Validade)
-                .NotNull().WithMessage("Campo 'Validade' não pode ser nulo")
-                .NotEmpty().WithMessage("Campo 'Validade' não pode ser vazio");
+                .NotNull().WithMessage("Campo 'Validade' incorreto")
+                .NotEmpty().WithMessage("Campo 'Validade' incorreto")
+                .GreaterThan(DateTime.MinValue).WithMessage("Campo 'Validade' incorreto");
 
             RuleFor(x => x.Fornecedor)
-                .NotNull().WithMessage("Campo 'Fornecedor' não pode ser nulo");
+             .NotNull().WithMessage("Campo 'Fornecedor' não pode ser nulo");
 
 
 
