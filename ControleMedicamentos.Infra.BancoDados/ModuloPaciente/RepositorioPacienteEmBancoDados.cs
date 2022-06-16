@@ -22,19 +22,19 @@ namespace ControleMedicamentos.Infra.BancoDados.ModuloPaciente
         #region Sql Queries
 
         private const string sqlInserir =
-          @"INSERT INTO [TBPaciente]
+          @"INSERT INTO TBPACIENTE
                 (
-                    Nome,
-                    CartaoSUS
+                    NOME,
+                    CARTAOSUS
                 )
                     VALUES
                 (
-                    @Nome,
-                    @CartaoSUS );
+                    @NOME,
+                    @CARTAOSUS );
           SELECT SCOPE_IDENTITY();";
 
         private const string sqlEditar =
-           @"UPDATE [TBPaciente]	
+           @"UPDATE TBPACIENTE	
 		        SET
 			        Nome = @Nome,
 			        CartaoSUS = @CartaoSUS
@@ -43,7 +43,7 @@ namespace ControleMedicamentos.Infra.BancoDados.ModuloPaciente
 			        [ID] = @ID";
 
         private const string sqlExcluir =
-            @"DELETE FROM [TBPaciente]
+            @"DELETE FROM TBPACIENTE
 		        WHERE
 			        [ID] = @ID";
 
@@ -54,7 +54,7 @@ namespace ControleMedicamentos.Infra.BancoDados.ModuloPaciente
                     [CartaoSUS]
 		          
 	            FROM 
-		            [TBPaciente]";
+		            [TBPACIENTE]";
 
         private const string sqlSelecionarPorId =
            @"SELECT 
@@ -63,7 +63,7 @@ namespace ControleMedicamentos.Infra.BancoDados.ModuloPaciente
                         [CartaoSUS] 
 		         
 	                FROM 
-		                [TBPaciente]
+		                [TBPACIENTE]
 		            WHERE
                         [ID] = @ID";
 
